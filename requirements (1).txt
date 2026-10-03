@@ -1,4 +1,0 @@
-streamlit>=1.40
-faster-whisper
-numpy
-# add anything else audio_features.py / the other modules import (e.g. librosa, soundfile, pydub)
