@@ -1,3 +1,4 @@
+import librosa
 import string
 from faster_whisper import WhisperModel
 
@@ -14,7 +15,8 @@ def get_model():
 def transcribe_audio(path):
     """Return transcript, duration, language and word-level timestamps."""
     segments, info = get_model().transcribe(
-        path,
+    librosa.load(path, sr=16000, mono=True)[0],
+   
         word_timestamps=True,
         initial_prompt="Um, uh, so, like, you know, I mean, basically, actually.",
     )
