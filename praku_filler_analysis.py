@@ -89,7 +89,7 @@ def analyze_fillers(words):
         ("you", "know", "you know"),
         ("i", "mean", "i mean"),
         ("kind", "of", "kind of"),
-        ("sort", "of", "sort of","like"),
+        ("sort", "of", "sort of"),
     ]
     for i in range(len(normalized) - 1):
         a, b = normalized[i], normalized[i + 1]
