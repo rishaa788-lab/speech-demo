@@ -128,10 +128,18 @@ class NonEnglishError(Exception):
 
 @st.dialog("English only")
 def english_only_dialog():
-    st.write(
-        "Speech Coach only analyzes **English** speech right now."
+    st.markdown(
+        "<p style='color:red; font-weight:bold;'>"
+        "Speech Coach only analyzes <b>English</b> speech right now."
+        "</p>",
+        unsafe_allow_html=True
     )
-    st.write("Please upload or record your speech in English and try again.")
+    st.markdown(
+        "<p style='color:red;'>"
+        "Please upload or record your speech in English and try again."
+        "</p>",
+        unsafe_allow_html=True
+    )
     if st.button("OK", use_container_width=True):
         st.rerun()
 
