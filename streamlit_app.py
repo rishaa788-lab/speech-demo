@@ -128,6 +128,13 @@ class NonEnglishError(Exception):
 
 @st.dialog("English only")
 def english_only_dialog():
+    st.markdown("""
+        <style>
+        [data-testid="stDialog"] h2 {
+            color: red !important;
+        }
+        </style>
+    """, unsafe_allow_html=True)
     st.markdown(
         "<p style='color:red; font-weight:bold;'>"
         "Speech Coach only analyzes <b>English</b> speech right now."
