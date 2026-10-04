@@ -1,0 +1,8 @@
+streamlit>=1.40
+faster-whisper
+librosa
+numpy
+scipy
+plotly
+soundfile
+reportlab
