@@ -1,34 +1,46 @@
-# Speech Coach — Streamlit version
+# Speech Coach — Clean Architecture
 
-This is the Streamlit deployment version of the final Speech Coach project.
+This version reorganizes the original Streamlit application without rewriting its existing analysis/UI logic.
 
-## Run locally
+## Structure
 
-```bash
-py -m pip install -r requirements.txt
-py -m streamlit run streamlit_app.py
+```text
+speech_coach_clean/
+├── app.py                         # Streamlit entry point / page orchestration
+├── frontend/
+│   ├── components.py              # Streamlit dialogs/components
+│   ├── charts.py                  # Plotly chart builders
+│   ├── styles.py                  # CSS/assets loading
+│   └── ui_helpers.py              # Reusable UI helpers and session progress state
+├── backend/
+│   ├── analysis_service.py        # Audio preprocessing + analysis pipeline
+│   └── report_generator.py        # PDF report generation
+├── static/
+│   ├── style.css                  # Put your existing CSS here
+│   └── mic.svg                    # Put your existing microphone SVG here
+├── speech_to_text.py              # Your existing module — keep unchanged
+├── praku_filler_analysis.py       # Your existing module — keep unchanged
+├── ananya_rubric.py               # Your existing module — keep unchanged
+├── audio_features.py              # Your existing module — keep unchanged
+└── requirements.txt
 ```
 
-## Deploy
+## Run
 
-Use Streamlit Community Cloud:
-1. Push this folder to the GitHub repository.
-2. Open Streamlit Community Cloud.
-3. Select the repository and branch.
-4. Set the main file to `streamlit_app.py`.
-5. Deploy.
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-The app keeps the Speech Coach visual system:
-- #219DBC primary teal
-- #92C9E6 analysis-card outlines
-- microphone branding
-- light/dark mode
-- circular 0–100 delivery-factor rings
-- red <30, yellow 30–80, green >80 score logic
-- transcript filler highlighting
-- Sinchana transcription + timestamps
-- Praku filler/hedging analysis
-- Ananya 0–100 rubric + feedback
-- audio volume/pausing analysis
+## Important
 
-Note: the Faster-Whisper model downloads on first analysis and may take a little time.
+The four analysis modules are intentionally not rewritten because they were not included in the uploaded file. Replace the placeholder files in this package with your original versions, unchanged.
+
+The existing `static/style.css` and `static/mic.svg` assets should also be copied into `static/` if they exist in your current project.
+
+## Architecture
+
+- **Frontend:** Streamlit presentation, styling, reusable UI helpers, and charts.
+- **Backend:** audio-processing pipeline and PDF report generation.
+- **Entry point:** `app.py` coordinates the frontend and backend.
+- **Analysis modules:** remain independent backend dependencies.
