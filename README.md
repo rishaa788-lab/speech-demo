@@ -1,38 +1,38 @@
-# 🎤 Speech Coach
+#  Speech Coach
 
 **Speech Coach** is an AI-powered speech analysis application built for the **Multimodal AI Hackathon 2026**.
 
 It helps users improve their speaking and presentation delivery by analyzing an uploaded or recorded speech and providing a clear breakdown of:
 
-- 📝 Speech transcription
-- 🟡 Filler words
-- 📊 Filler-word percentage
-- ⚡ Speaking pace
-- 🔊 Voice volume
-- ⏸️ Pausing
-- 🔁 Repeated words
-- 🎯 Overall delivery score
-- 💡 Actionable improvement feedback
-- 📈 Progress across multiple attempts
-- 📄 Downloadable PDF analysis reports
+-  Speech transcription
+-  Filler words
+-  Filler-word percentage
+-  Speaking pace
+-  Voice volume
+-  Pausing
+-  Repeated words
+-  Overall delivery score
+-  Actionable improvement feedback
+-  Progress across multiple attempts
+-  Downloadable PDF analysis reports
 
 The application currently analyzes **English speech**.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 🎙️ Upload or Record Speech
+###  Upload or Record Speech
 Users can either upload an audio file or record speech directly through the application.
 
 Supported upload formats include:
 
 `WAV`, `MP3`, `M4A`, `MPEG`, `MP4`, and `WEBM`.
 
-### 🗣️ Speech-to-Text Analysis
+###  Speech-to-Text Analysis
 The speech is transcribed with word-level timing information. These timestamps are used by the downstream analysis modules.
 
-### 🟡 Filler Word Detection
+###  Filler Word Detection
 The application identifies filler words and tracks when they occur during the speech.
 
 The results include:
@@ -43,14 +43,14 @@ The results include:
 - A visual filler-word timeline
 - Highlighted filler words in the transcript
 
-### 🎵 Audio Analysis
+###  Audio Analysis
 The audio is processed to evaluate delivery characteristics including:
 
 - Volume
 - Pausing
 - Duration
 
-### 📊 Speech Scoring
+###  Speech Scoring
 The speech is evaluated using a 0–100 scoring system covering:
 
 - Pace
@@ -67,13 +67,13 @@ Scores are also grouped into:
 | 30–80 | Developing |
 | Above 80 | Strong |
 
-### 💡 Actionable Feedback
+###  Actionable Feedback
 The application generates feedback based on the analysis so the user can understand what to improve.
 
-### 📈 Improvement Tracker
+###  Improvement Tracker
 The last three attempts are retained while the page remains open, allowing users to compare their progress over multiple recordings.
 
-### 📄 PDF Reports
+###  PDF Reports
 Users can download a detailed PDF report containing:
 
 - Overall score
@@ -83,12 +83,12 @@ Users can download a detailed PDF report containing:
 - Transcript
 - Improvement feedback
 
-### 🌙 Dark / Light Interface
+###  Dark / Light Interface
 The Streamlit interface includes a theme toggle and a custom-designed visual interface.
 
 ---
 
-# 🏗️ Project Architecture
+#  Project Architecture
 
 The project is organized into separate frontend, backend/service, and analysis modules.
 
@@ -126,7 +126,7 @@ Speech-Coach/
     └── config.toml
 ```
 
-## 🧩 Module Responsibilities
+##  Module Responsibilities
 
 ### `app.py`
 The main Streamlit application entry point.
@@ -162,7 +162,7 @@ This separation keeps the analysis components independent from the Streamlit pre
 
 ---
 
-# 🔄 Analysis Pipeline
+#  Analysis Pipeline
 
 The application follows this general flow:
 
@@ -198,7 +198,7 @@ Before analysis, uploaded/recorded audio can be converted to a **16 kHz mono WAV
 
 ---
 
-# 🛠️ Tech Stack
+#  Tech Stack
 
 - **Python**
 - **Streamlit** — interactive web application
@@ -211,7 +211,7 @@ The exact Python dependencies are listed in `requirements.txt`.
 
 ---
 
-# 🚀 Running the Application Locally
+#  Running the Application Locally
 
 ## 1. Clone the repository
 
@@ -258,7 +258,7 @@ The Streamlit server will provide a local URL where the application can be opene
 
 ---
 
-# 📋 Usage
+#  Usage
 
 1. Open Speech Coach.
 2. Upload an audio file **or** record speech.
@@ -273,7 +273,7 @@ The Streamlit server will provide a local URL where the application can be opene
 
 ---
 
-# 🌐 Language Support
+#  Language Support
 
 Speech Coach currently analyzes **English speech only**.
 
@@ -281,7 +281,7 @@ If non-English speech is detected, the application displays an English-only mess
 
 ---
 
-# 📊 Results Dashboard
+#  Results Dashboard
 
 After analysis, the dashboard presents:
 
@@ -323,7 +323,7 @@ Progress Tracker
 
 ---
 
-# 👥 Project Structure for the Hackathon
+#  Project Structure for the Hackathon
 
 The project follows a modular architecture so that different parts of the system can be developed and maintained independently.
 
@@ -363,7 +363,7 @@ Potential future improvements include:
 
 ---
 
-# 🏆 Hackathon
+#  Hackathon
 
 **Speech Coach — Multimodal AI Hackathon 2026**
 
@@ -371,6 +371,6 @@ The project combines speech transcription, language analysis, audio analysis, sc
 
 ---
 
-## 📄 License
+##  License
 
 This project was created as a hackathon project.
