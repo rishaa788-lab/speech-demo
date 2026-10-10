@@ -349,7 +349,7 @@ This separation makes the application easier to understand, test, maintain, and 
 
 ---
 
-# 🔮 Future Improvements
+#  Future Improvements
 
 Potential future improvements include:
 
