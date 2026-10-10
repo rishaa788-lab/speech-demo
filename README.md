@@ -1,6 +1,6 @@
 #  Speech Coach
 
-**Speech Coach** is an AI-powered speech analysis application built for the **Multimodal AI Hackathon 2026**.
+**Speech Coach** is a speech analysis application built for the **Multimodal AI Hackathon 2026**.
 
 It helps users improve their speaking and presentation delivery by analyzing an uploaded or recorded speech and providing a clear breakdown of:
 
